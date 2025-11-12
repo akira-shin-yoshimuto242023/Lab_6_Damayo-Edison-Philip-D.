@@ -17,7 +17,6 @@ public class ProductFilter {
         Scanner scanner = new Scanner(System.in);
         List<Product> products = new ArrayList<>();
 
-        // Add some sample products
         products.add(new Product("Laptop", 1200.00));
         products.add(new Product("Mouse", 25.50));
         products.add(new Product("Keyboard", 60.00));
@@ -26,6 +25,12 @@ public class ProductFilter {
 
         System.out.print("Enter price threshold: ");
         double threshold = scanner.nextDouble();
+
+        long count = products.stream()
+                .filter(p -> p.price > threshold)
+                .count();
+
+        System.out.println("Number of products with price greater than " + threshold + ": " + count);
 
         scanner.close();
     }
