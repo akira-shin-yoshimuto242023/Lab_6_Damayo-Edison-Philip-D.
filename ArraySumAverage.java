@@ -6,17 +6,6 @@ public class ArraySumAverage {
         int[] numbers = new int[5];
         int sum = 0;
 
-        System.out.println("Enter 5 numbers:");
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = scanner.nextInt();
-            sum += numbers[i];
-        }
-
-        double average = (double) sum / numbers.length;
-
-        System.out.println("Sum: " + sum);
-        System.out.println("Average: " + average);
-
-        scanner.close();
+       
     }
 }
